@@ -11,6 +11,11 @@ class FindSHDetailSerializer(serializers.ModelSerializer):
     class Meta:
         model = FindSH
         fields = '__all__'
+
+class FindSHSearchSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = FindSH
+        fields = ['place', 'promise_date', 'age_group', 'gender', 'num']
         
 class FindSHCreateSerializer(serializers.ModelSerializer):
 
