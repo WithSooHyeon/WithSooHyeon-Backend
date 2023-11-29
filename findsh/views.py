@@ -35,3 +35,7 @@ class FindSHCreate(generics.CreateAPIView):
         
             return Response(serializer.data, status=status.HTTP_200_OK)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+class FindSHDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset= FindSH.objects.all()
+    serializer_class= FindSHDetailSerializer

@@ -5,7 +5,12 @@ class FindSHListSerializer(serializers.ModelSerializer):
     class Meta:
         model = FindSH
         fields = ['id', 'title', 'content', 'created_at', 'promise_date', 'place', 'age_group',
-                  'gender', 'num', 'fee']
+                  'gender', 'num', 'free_condition', 'fee'] # , nickname
+
+class FindSHDetailSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = FindSH
+        fields = '__all__'
         
 class FindSHCreateSerializer(serializers.ModelSerializer):
 

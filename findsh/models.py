@@ -7,7 +7,7 @@ class FindSH(models.Model):
     promise_date = models.DateTimeField(auto_now_add=False, null=True)
     place = models.CharField(max_length=20)
     age_group= models.IntegerField(default=20)
-    gender = models.BooleanField(default=False)
+    gender = models.IntegerField(default=20)
     num = models.IntegerField(default=1)
     fee = models.IntegerField(default=0)
     hits = models.IntegerField(default=0)

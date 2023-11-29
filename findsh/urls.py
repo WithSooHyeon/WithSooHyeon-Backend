@@ -3,4 +3,5 @@ from .views import *
 
 urlpatterns = [
     path("", FindSHList.as_view()),
+    path("<int:pk>", FindSHDetail.as_view()),
 ]
